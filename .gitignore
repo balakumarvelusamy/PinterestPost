@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Project specific
+pinterest_session.json
+daily_log.txt
+error.png
+.DS_Store
+
+# Ignore images only inside specifically these folders
+to_post/*.jpg
+to_post/*.jpeg
+to_post/*.png
+
+posted/*.jpg
+posted/*.jpeg
+posted/*.png
