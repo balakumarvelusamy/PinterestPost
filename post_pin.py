@@ -3,6 +3,7 @@ import time
 import shutil
 import os
 from pathlib import Path
+from datetime import datetime
 from playwright.sync_api import sync_playwright
 
 BASE_DIR = Path(__file__).parent
@@ -107,7 +108,7 @@ def main():
             print("Publishing...")
             time.sleep(10) # Wait for publish to complete
             shutil.move(str(image), POSTED / image.name)
-            print(f"✅ Posted and moved: {image.name}")
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ✅ Posted and moved: {image.name}")
 
         except Exception as e:
             print(f"❌ Error occurred: {e}")
